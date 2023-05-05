@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Calculator</title>
+	<script>
+		function add() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var total = num1 + num2;
+			document.getElementById("total").value = total;
+		}
+
+		function subtract() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var total = num1 - num2;
+			document.getElementById("total").value = total;
+		}
+
+		function multiply() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var total = num1 * num2;
+			document.getElementById("total").value = total;
+		}
+
+		function divide() {
+			var num1 = parseFloat(document.getElementById("num1").value);
+			var num2 = parseFloat(document.getElementById("num2").value);
+			var total = num1 / num2;
+			document.getElementById("total").value = total;
+		}
+
+		function Clear() {
+			document.getElementById("num1").value = " ";
+			document.getElementById("num2").value = " ";
+			document.getElementById("total").value = " ";
+		}
+
+		function About() {
+			alert("This calculator created by Due, John Mark T. - with HTML, CSS, and JavaScript.");
+		}
+	</script>
+
+<style>
+    body {
+        color: white;
+    }
+    fieldset {
+        width: 400px;
+        background-color: rgb(3, 97, 47);
+    }
+
+    legend {
+        color:crimson;
+    }
+
+    #num1 {
+        width: 100px;
+    }
+
+    #num2 {
+        width: 100px;
+    }
+
+    #total {
+        width: 100px;
+    }
+
+    button {
+        background-color: coral;
+        padding: 5px 10px ;
+        border-radius: 7px;
+    }
+
+</style>
+
+    
+</head>
+<body>
+	
+    <fieldset>
+        <legend><h2>Simple Calculator</h2></legend>
+            <label for="num1">Input 1st Number :</label>
+            <input type="number" size="4" id="num1" name="num1">
+            <br>
+            
+
+            <label for="num2">Input 2nd Number :</label>
+            <input type="number" size="4" id="num2" name="num2">
+            <br>
+
+            &nbsp;
+            &nbsp;
+            &emsp;
+            &emsp;
+            &emsp;
+            <label for="total">Total :</label>
+            <input type="number" size="4" id="total" name="total" disabled>
+            <br>
+            <br>
+
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="subtract()">Subtract</button>
+            <button type="button" onclick="multiply()">Multiply</button>
+            <button type="button" onclick="divide()">Divide</button>
+            <button type="button" onclick="Clear()">Clear</button>
+            <button type="button" onclick="About()">About</button>
+        
+    </fieldset>
+</body> 
+</html>
